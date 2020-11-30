@@ -11,7 +11,7 @@ url = "https://twelve-data1.p.rapidapi.com/rsi"
 querystring = {"symbol":"FCEL","interval":"1min","series_type":"close","outputsize":"30","format":"json","time_period":"14"}
 
 headers = {
-    'x-rapidapi-key': "91c9731234mshaa0159144ccc387p15ba78jsn35630e0f0930",
+    'x-rapidapi-key': "",
     'x-rapidapi-host': "twelve-data1.p.rapidapi.com"
     }
 

@@ -7,7 +7,7 @@ TOPIC = "footballapi"
 url = "https://api-football-v1.p.rapidapi.com/v2/topscorers/2"
 
 headers = {
-    'x-rapidapi-key': "91c9731234mshaa0159144ccc387p15ba78jsn35630e0f0930",
+    'x-rapidapi-key': "",
     'x-rapidapi-host': "api-football-v1.p.rapidapi.com"
     }
 

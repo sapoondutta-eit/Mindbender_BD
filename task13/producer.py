@@ -5,10 +5,10 @@ from kafka import SimpleProducer
 from kafka import KafkaClient
 
 
-access_token = "1322200166179495942-29Km6XcR3oUHjpVFnCTSnY6EQDilCM"
-token_secret = "oQbrRmmMAR35qP2GwVUvI9BIRpvVx15xUr2d0dmeDqB1U"
-consumer_key = "zRk1tHa1ONLXl8ERb7CVCNbCY"
-consumer_secret = "iuRKQ3a3AqRJ7dU31K8AhnbTqVLjHBAkqmTaS2IR7vCcQMxYIB"
+access_token = 
+token_secret = 
+consumer_key = 
+consumer_secret =
 topic = "tweets"
 
 class StdOutListener(StreamListener):
