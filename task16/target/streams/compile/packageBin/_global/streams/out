@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/marcus/Mindbender_BD/task16/target/scala-2.11/streamhandler_2.11-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marcus/Mindbender_BD/task16/target/scala-2.11/classes/StreamHandler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marcus/Mindbender_BD/task16/target/scala-2.11/classes/StreamHandler$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stock_data.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marcus/Mindbender_BD/task16/target/scala-2.11/classes/stock_data.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stock_data$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marcus/Mindbender_BD/task16/target/scala-2.11/classes/stock_data$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

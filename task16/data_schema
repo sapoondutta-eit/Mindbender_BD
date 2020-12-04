@@ -1,0 +1,47 @@
+{
+  "symbol": "AAPL",
+  "name": "Apple Inc",
+  "exchange": "NASDAQ",
+  "currency": "USD",
+  "datetime": "2020-12-02",
+  "open": "122.02000",
+  "high": "123.37000",
+  "low": "120.89000",
+  "close": "123.08000",
+  "volume": "81436335",
+  "previous_close": "122.72000",
+  "change": "0.36000",
+  "percent_change": "0.29335",
+  "average_volume": "96660773",
+  "fifty_two_week": {
+    "low": "53.15250",
+    "high": "137.39000",
+    "low_change": "69.92750",
+    "high_change": "-14.31000",
+    "low_change_percent": "131.56014",
+    "high_change_percent": "-10.41560",
+    "range": "53.152500 - 137.389999"
+  }
+}
+
+
+
+        val s_data = inputDF.withColumn("fifty_two_week", explode(array($"fifty_two_week")))
+        .withColumn("low",$"fifty_two_week"(0))
+        .withColumn("high",$"fifty_two_week"(1))
+        .withColumn("low_change",$"fifty_two_week"(2))
+        .withColumn("high_change",$"fifty_two_week"(3))
+        .withColumn("low_change_percent",$"fifty_two_week"(4))
+        .withColumn("high_change_percent",$"fifty_two_week"(5))
+        .withColumn("range",$"fifty_two_week"())
+        .drop("fifty_two_week")
+
+        
+        val new_col = inputDF.withColumn("low",struct($"fifty_two_week")("low"))
+        .withColumn("high",struct($"fifty_two_week")("high"))
+        .withColumn("low_change",struct($"fifty_two_week")("low_change"))
+        .withColumn("high_change",struct($"fifty_two_week")("high_change"))
+        .withColumn("low_change_percent",struct($"fifty_two_week")("low_change_percent"))
+        .withColumn("high_change_percent",struct($"fifty_two_week")("high_change_percent"))
+        .withColumn("range",struct($"fifty_two_week")("range"))
+        .drop("fifty_two_week")

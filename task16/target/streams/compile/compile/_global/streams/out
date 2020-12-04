@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/marcus/Mindbender_BD/task16/src/main/scala/Steamhandler.scala:150:20: Decimal integer literals may not have a leading zero. (Octal syntax is obsolete.)[0m
+[0m[[0m[31merror[0m] [0m[0m    val block_sz = 0128[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marcus/Mindbender_BD/task16/src/main/scala/Steamhandler.scala:151:5: ';' expected but 'val' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    val query = inputDF[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

@@ -1,0 +1,26 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(;Test/compile; collectAnalyses, None, Some(CommandSource(network-2)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Done"})[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Test/compile, None, Some(CommandSource(network-2)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"89","parents":[]},"eventTime":1607016864288,"message":"Compiling task16","dataKind":"compile-task","data":{"target":{"uri":"file:/home/marcus/Mindbender_BD/task16/#task16/Compile"}}})[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/marcus/Mindbender_BD/task16/target/scala-2.11/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"compiling 1 Scala source to /home/marcus/Mindbender_BD/task16/target/scala-2.11/classes ..."})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/marcus/Mindbender_BD/task16/src/main/scala/Steamhandler.scala"},"buildTarget":{"uri":"file:/home/marcus/Mindbender_BD/task16/#task16/Compile"},"diagnostics":[{"range":{"start":{"line":4,"character":11},"end":{"line":4,"character":12}},"severity":1,"source":"sbt","message":"object mongodb is not a member of package com"}],"reset":false})[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marcus/Mindbender_BD/task16/src/main/scala/Steamhandler.scala:5:12: object mongodb is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.mongodb.spark._[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"/home/marcus/Mindbender_BD/task16/src/main/scala/Steamhandler.scala:5:12: object mongodb is not a member of package com"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"import com.mongodb.spark._"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"           ^"})[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"one error found"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/marcus/Mindbender_BD/task16/src/main/scala/Steamhandler.scala"},"buildTarget":{"uri":"file:/home/marcus/Mindbender_BD/task16/#task16/Compile"},"diagnostics":[{"range":{"start":{"line":4,"character":11},"end":{"line":4,"character":12}},"severity":1,"source":"sbt","message":"object mongodb is not a member of package com"}],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"89","parents":[]},"eventTime":1607016864604,"message":"Compiled task16","status":2,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/marcus/Mindbender_BD/task16/#task16/Compile"},"errors":1,"warnings":0,"time":316}})[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"(Compile / \u001b[31mcompileIncremental\u001b[0m) Compilation failed"})[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Dec 3, 2020 12:34:24 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Done"})[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
