@@ -3,6 +3,8 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import KafkaProducer
 from kafka import KafkaClient
+import re 
+from textblob import TextBlob 
 
 
 TOPIC = "stonks"
@@ -14,7 +16,7 @@ consumer_key = "I2owvns6rDZpBXf7pMrox2KuI"
 consumer_secret = "Deb5HvJp1yWpECKkCbD0KaRjiwmpSl8QzRblvvXWBeUXwlGnqM"
 access_token = "1322200166179495942-I6MLoDWZ97WsuMNMGnwOjE1KHFeWGd"
 access_token_secret = "OtB9zJfaaoPV45gT9oqu34mIVaseaCKpM8mlbPlewcRvA"
-producer = KafkaProducer(bootstrap_servers=SERVERS)
+#producer = KafkaProducer(bootstrap_servers=SERVERS)
 
 
 class twitterAuth():
@@ -36,10 +38,16 @@ class TwitterStreamer():
 			stream.filter(track=["MUFC"], stall_warnings=True, languages= ["en"])
 
 
+
 class ListenerTS(StreamListener):
+	def clean_tweet(self, tweet): 
+		return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) |(\w+:\/\/\S+)", " ", tweet).split()) 
+
 	def on_data(self, raw_data):
-		producer.send(TOPIC, str.encode(raw_data))
-		producer.flush()
+		#new_data = self.clean_tweet(raw_data)
+		print(raw_data)
+		#producer.send(TOPIC, str.encode(raw_data))
+		#producer.flush()
 		return True
 
 

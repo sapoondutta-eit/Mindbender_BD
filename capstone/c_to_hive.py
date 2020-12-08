@@ -22,7 +22,7 @@ try:
     print(row)
 
 client.execute("SELECT * FROM tweets_for_analysis")
-print client.fetchAll()
-transport.close()
+  print client.fetchAll()
+  transport.close()
 except Thrift.TException, tx:
   print('%s' % (tx.message))
