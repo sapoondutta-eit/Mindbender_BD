@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dashboard</title>
+
+<style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+<!-- <table >
+{% for row in data %}
+<td>{{row.Last}}</td>
+<td>{{row.First}}</td>
+{% endfor %}
+</table>
+ -->
+<!-- <table>
+    <tbody>
+    {% for row in rows %}
+    <tr>
+        <td>{row.id}</td>
+        <td>{row.text}</td>
+        <td>{row.polarity}</td>
+        <td>{row.subjectivity}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table> -->
+
+<!--     <table  border="3" text-align:center cellpadding="5" cellspacing="5">  -->
+    	 <table>
+    	 <caption>Business Sentiment Analyzer</caption>
+        <thead> 
+        <tr> 
+            <th>ID</th> 
+            <th>Text</th>
+            <th>Polarity</th>
+            <th>Subjectivity</th> 
+        </tr> 
+        </thead> 
+        <tbody> 
+            {% for row in value %}  
+                <tr> 
+                    <td>{{row[0]}}</td> 
+                    <td>{{row[1]}}</td> 
+                    <td>{{row[2]}}</td> 
+                    <td>{{row[3]}}</td> 
+                </tr> 
+            {% endfor %} 
+        </tbody> 
+    </table> 
+
+</body>
+</html>
+
+
+

@@ -161,6 +161,5 @@ StructField("fifty_two_week",StringType,true)
 
 
         query.awaitTermination()
-    }
-    
+    }   
 }
