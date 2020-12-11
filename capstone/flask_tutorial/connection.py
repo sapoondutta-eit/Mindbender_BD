@@ -6,25 +6,30 @@ from flask_mysqldb import MySQL
 from flask import Flask, redirect, url_for,request, render_template
 import pandas as pd
 import matplotlib.pyplot  as plt
-
+import time
 
 
 app = Flask(__name__)
 api = Api(app)
 
 
-conn = MySQLdb.connect("localhost","root","password","tweets" ) 
-cursor = conn.cursor() 
+
 
 @app.route('/dashboard/')
 def example(): 
-    cursor.execute("select * from senti_tweets") 
-    data = cursor.fetchall() #data from database 
-    return render_template("dashboard.html", value=data)
+	while(True):
+		conn = MySQLdb.connect("localhost","root","password","tweets" ) 
+		cursor = conn.cursor() 
+		cursor.execute("select * from senti_tweets") 
+		data = cursor.fetchall() #data from database 
+		# time.sleep(10)
+		# example()
+		return render_template("dashboard.html", value=data)
 
 @app.route('/plot/')
 def plot():
-
+	conn = MySQLdb.connect("localhost","root","password","tweets" ) 
+	cursor = conn.cursor() 
 	cursor.execute("select polarity,subjectivity from senti_tweets")
 	result = cursor.fetchall()
 	df = pd.DataFrame(list(result),columns=["polarity","subjectivity"])
@@ -34,12 +39,10 @@ def plot():
 	plt.xlim((-10,10))
 	# Set y-axis range
 	plt.ylim((-10,10))
-	plt.title("polarity-subjectivity scatter plot", fontsize="24")
-	plt.scatter(x, y, s=100)
+	plt.title("polarity-subjectivity scatter plot", fontsize="30")
+	plt.scatter(x, y)
 	plt.xlabel("polarity")
 	plt.ylabel("subjectivity")
-	plt.axhline(0, color='red')
-	plt.axvline(0, color='red')
 	plt.tick_params(axis='both',which='major',labelsize=14)
 	plt.savefig('static/images/plot.png')
 	return render_template('plot.html', url='/static/images/plot.png')

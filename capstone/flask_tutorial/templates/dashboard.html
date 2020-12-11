@@ -1,10 +1,18 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<meta charset="utf-8" http-equiv="refresh" content="5">
+<!-- <meta http-equiv="refresh" content="5" > -->
 <title>Dashboard</title>
 
-<style>
+    	 <h1  style="text-align:center">Business Sentiment Analyzer</h1>
+
+
+
+
+<!-- <style>
       table,
       th,
       td {
@@ -12,7 +20,7 @@
         border: 1px solid black;
         border-collapse: collapse;
       }
-    </style>
+    </style> -->
 </head>
 <body>
 <!-- <table >
@@ -36,8 +44,8 @@
 </table> -->
 
 <!--     <table  border="3" text-align:center cellpadding="5" cellspacing="5">  -->
-    	 <table>
-    	 <caption>Business Sentiment Analyzer</caption>
+<div class="container mt-5" >
+<table class="table table-dark table-striped table-hover">
         <thead> 
         <tr> 
             <th>ID</th> 
@@ -57,7 +65,7 @@
             {% endfor %} 
         </tbody> 
     </table> 
-
+</div>
 </body>
 </html>
 
